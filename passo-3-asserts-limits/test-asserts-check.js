@@ -1,5 +1,6 @@
 import http from 'k6/http'
 import { sleep, check } from 'k6'
+import { BASE_URL } from '../config.js';
 
 export const options = {
     vus: 10,  // número de usuários virtuais
@@ -7,10 +8,11 @@ export const options = {
 }
 
 export default function () {
-    let response = http.get('http://localhost:3000/api/health')
+    let response = http.get(`${BASE_URL}/api/health`);
+
     check(response, {
         'Deve validar o status code 200': (r) => r.status === 200,
     });
-    sleep(1)
 
+    sleep(1)
 }

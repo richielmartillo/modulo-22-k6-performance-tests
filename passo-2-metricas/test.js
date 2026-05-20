@@ -4,7 +4,7 @@ import { BASE_URL } from '../config.js'
 
 export const options = {
     vus: 10,  // número de usuários virtuais
-    duration: '10s' // o tempo de execução do teste, 30 segundos
+    duration: '10s' // o tempo de execução do teste, 10 segundos
 }
 
 export default function () {
