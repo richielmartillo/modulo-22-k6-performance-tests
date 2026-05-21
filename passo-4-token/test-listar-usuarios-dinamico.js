@@ -6,18 +6,20 @@ import { getToken } from '../geraToken.js';
 
 export const options = {
     vus: 1,  // número de usuários virtuais
-    duration: '5s' // o tempo de execução do teste, 10 segundos
+    duration: '5s' // tempo de execução do teste
 }
 
 export default function () {
-    const token = getToken()
+    const token = getToken();
+
     const headers = {
         Authorization: token,
-        accept: 'application/json'
+        Accept: 'application/json'
     }
 
-    let response = http.get(`${BASE_URL}/api/users`, { headers })
-    expect.soft(response.status).toBe(200) // Soft garante que o teste continue
-    sleep(1)
+    let response = http.get(`${BASE_URL}/api/users`, { headers });
 
+    expect.soft(response.status).toBe(200) // Soft garante que o teste continue
+
+    sleep(1)
 }
