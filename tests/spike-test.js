@@ -4,10 +4,10 @@ import { BASE_URL } from '../config.js'
 
 
 export const options = {
-    // Key configurations for Stress in this section
+    // Configurações do teste de spike
     stages: [
-        { duration: '30s', target: 400 }, // rump-up de 1 até 400 virtual users em 30 segundos.
-        { duration: '40s', target: 0 }, // ramp-down de 200 VUs até 0 em 40 segundos.
+        { duration: '30s', target: 400 }, // ramp-up até 400 VUs em 30 segundos
+        { duration: '40s', target: 0 }, // ramp-down de 400 VUs até 0 em 40 segundos
     ],
 };
 

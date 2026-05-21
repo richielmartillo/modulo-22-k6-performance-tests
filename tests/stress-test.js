@@ -4,9 +4,9 @@ import { BASE_URL } from '../config.js'
 
 
 export const options = {
-    // Key configurations for Stress in this section
+    // Configurações do teste de stress
     stages: [
-        { duration: '1m', target: 200 }, // rump-up de 1 até 200 virtual users em 1 minuto
+        { duration: '1m', target: 200 }, // ramp-up até 200 VUs em 1 minuto
         { duration: '5m', target: 200 }, // mantém as 200 VUs durante 5 minutos
         { duration: '1m', target: 0 }, // ramp-down de 200 VUs até 0 em 1 minuto.
     ],
