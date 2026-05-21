@@ -13,9 +13,11 @@ export const options = {
 }
 
 export default function () {
-    let response = http.get(`${BASE_URL}/api/health`)
+    let response = http.get(`${BASE_URL}/api/health`);
+
     expect.soft(response.status).toBe(200) // Soft garante que o teste continue
-    sleep(1)
+
+    sleep(1);
 
 }
 
